@@ -19,22 +19,27 @@ export default function TopBar() {
               HOME
             </Link>
           </li>
+          {/* <li className="topListItem"> */}
+          {/* <Link to="/posts" className="link">
+              POSTS
+            </Link>
+          </li> */}
           <li className="topListItem">
-            <Link to="/" className="link">
-              ABOUT
+            <Link to="/settings" className="link">
+              SETTINGS
             </Link>
           </li>
           <li className="topListItem">
-            <Link to="/" className="link">
-              CONTACT
-            </Link>
-          </li>
-          <li className="topListItem">
-            <Link to="/" className="link">
+            <Link to="/write" className="link">
               WRITE
             </Link>
           </li>
-          <li className="topListItem">{user && "LOGOUT"}</li>
+          {/* <li className="topListItem">{user && "LOGOUT"}</li> */}
+          <li className="topListItem">
+            <Link to="/login" className="link">
+              LOGIN
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="topright">
