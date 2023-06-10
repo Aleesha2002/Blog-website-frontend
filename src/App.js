@@ -7,6 +7,7 @@ import Write from "./pages/write/write";
 import Settings from "./pages/settings/settings";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Sign_Up/Signup";
+import Posts from "./components/posts/Posts";
 
 function App() {
   const user = false;
@@ -17,11 +18,12 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/signup">{user ? <Home /> : <Signup />}</Route>
-        <Route path="/login">{user ? <Home /> : <Login />}</Route>
-        <Route path="/write">{user ? <Write /> : <Signup />}</Route>
-        <Route path="/settings">{user ? <Settings /> : <Signup />}</Route>
+        <Route path="/signup">{<Signup />}</Route>
+        <Route path="/login">{<Login />}</Route>
+        <Route path="/write">{<Write />}</Route>
+        <Route path="/settings">{<Settings />}</Route>
         <Route path="/post/:postId">
+          <Route path="/posts">{<Posts />}</Route>
           <Single />
         </Route>
       </switch>
